@@ -1,0 +1,14 @@
+{
+  "name": "furlpay-example-x402-paid-api",
+  "private": true,
+  "scripts": {
+    "start": "tsx server.ts"
+  },
+  "dependencies": {
+    "express": "^4.19.0",
+    "x402-express": "^0.3.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+}

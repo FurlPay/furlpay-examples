@@ -1,0 +1,11 @@
+{
+  "name": "furlpay-example-express-webhooks",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@furlpay/furlpay-node": "^0.1.0",
+    "express": "^4.19.0"
+  }
+}

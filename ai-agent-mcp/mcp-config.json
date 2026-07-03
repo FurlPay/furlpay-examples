@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "furlpay": {
+      "command": "npx",
+      "args": ["-y", "@furlpay/mcp-server"],
+      "env": {
+        "FURLPAY_API_KEY": "sk_sandbox_YOUR_KEY_HERE"
+      }
+    }
+  }
+}
