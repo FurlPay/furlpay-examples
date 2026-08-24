@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "express": "^4.19.0",
-    "x402-express": "^0.3.0"
+    "x402-express": "^0.5.2"
   },
   "devDependencies": {
     "tsx": "^4.7.0"
