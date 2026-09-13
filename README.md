@@ -1,5 +1,14 @@
 # Furlpay Examples
 
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white)
+![x402](https://img.shields.io/badge/x402-0052FF?style=flat-square)
+
 Complete, runnable examples for integrating [Furlpay](https://furlpay.com) — stablecoin payments, wallets, cards, and AI-agent payments — in every major stack.
 
 Clone, `cd` into an example, add your API key, run. Time to first payment: minutes.
