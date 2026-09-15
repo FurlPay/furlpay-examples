@@ -16,8 +16,22 @@ app.post("/webhooks", express.raw({ type: "application/json" }), (req, res) => {
       endpointSecret
     );
   } catch (err) {
+    // Log the reason for yourself; do NOT return it.
+    //
+    // Two things are going on here, and the second is the one that bites:
+    //
+    //   1. Whoever just failed signature verification is, by definition, not
+    //      authenticated. Telling them WHICH check failed — missing header,
+    //      malformed header, stale timestamp, bad signature — hands an attacker
+    //      a probe for tuning the next attempt. A flat 400 tells them nothing.
+    //
+    //   2. `res.send(string)` sets Content-Type: text/html. Interpolating error
+    //      text into it makes this a reflected-XSS sink the moment a message
+    //      contains request input — one upstream change away, not a
+    //      hypothetical. `res.json()` is not HTML and carries no such risk,
+    //      which is why the handler further down already uses it.
     console.error("Webhook signature verification failed:", err.message);
-    return res.status(400).send(`Webhook Error: ${err.message}`);
+    return res.status(400).json({ error: "invalid_signature" });
   }
 
   switch (event.type) {
